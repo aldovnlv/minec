@@ -1,12 +1,12 @@
 services:
   mc:
-    hostname: mc
-    container_name: mc
+    hostname: ${HOSTNAME}
+    container_name: ${HOSTNAME}
     image: itzg/minecraft-server
     environment:
       EULA: "true"
     ports:
-      - "25565:25565"
+      - "${PORT}:25565"
     volumes:
       - data:/data
     stdin_open: true
